@@ -1,3 +1,18 @@
+/*
+//Coloque aqui oq você fez!!!!!!
+//
+//Lista!
+//Opcoes ->
+//Jogo1 ->
+//Jogo2 ->
+//Jogo3 ->
+//desvirar ->
+//pontuacao ->
+//mistura -> OK
+//historico ->
+//reinicia ->
+//esconde ->
+*/
 var jogador1 = false;
 var jogador2 = true;
 var QtdPeca;
@@ -201,7 +216,7 @@ function pontuacao(){
            ptJogador1++;
         }
         if(document.getElementById(peca1).innerHTML != document.getElementById(peca2).innerHTML){
-        desvira();
+        esconde();
         }
         if(QtdJogador == 2){
         document.getElementById("jogador1").innerHTML ="Pontuacao do jogador 1: " + ptJogador1;
@@ -325,7 +340,8 @@ function reinicia(){
           document.getElementById("6x6").innerHTML = "";
 	Opcoes();
 }
-function desvira(){
+function esconde(){
     document.getElementById(peca1).innerHTML = inv[0];
     document.getElementById(peca2).innerHTML = inv[1];
+	ptJogador1--;
 }
