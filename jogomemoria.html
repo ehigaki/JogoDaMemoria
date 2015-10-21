@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="jogomemoria.css" />
+        <script	type="text/javascript"	src="jogomemoria.js"></script>
+        <title>Jogo da Memoria</title>
+    </head>
+
+    <body onload="Opcoes()">
+        <div id="menu">
+
+        </div>
+
+        <div id ="conteudo">
+            <div class="coluna1">
+                <a id="1x1" onclick='desvirar("1x1")'>
+                </a>
+                <a id="1x2" onclick='desvirar("1x2")'>
+                </a>
+                <a id="1x3" onclick='desvirar("1x3")'>
+                </a>
+                <a id="1x4" onclick='desvirar("1x4")' >
+                </a>
+                <a id="1x5" onclick='desvirar("1x5")'>
+                </a>
+                <a id="1x6" onclick='desvirar("1x6")'>
+                </a>
+
+            <div class="coluna2">
+                    <a id="2x1" onclick='desvirar("2x1")'>
+                    </a>
+                    <a id="2x2" onclick='desvirar("2x2")'>
+                    </a>
+                    <a id="2x3" onclick='desvirar("2x3")'>
+                    </a>
+                    <a id="2x4" onclick='desvirar("2x4")'>
+                    </a>
+                    <a id="2x5" onclick='desvirar("2x5")'>
+                    </a>
+                    <a id="2x6" onclick='desvirar("2x6")'>
+                    </a>
+            </div>
+                
+            <div class="coluna3">
+                    <a id="3x1" onclick='desvirar("3x1")'>
+                    </a>
+                    <a id="3x2" onclick='desvirar("3x2")'>
+                    </a>
+                    <a id="3x3" onclick='desvirar("3x3")'>
+                    </a>
+                    <a id="3x4" onclick='desvirar("3x4")'>
+                    </a>
+                    <a id="3x5" onclick='desvirar("3x5")'>
+                    </a>
+                    <a id="3x6" onclick='desvirar("3x6")'>
+                    </a>
+            </div>
+                
+            <div class="coluna4">
+                    <a id="4x1" onclick='desvirar("4x1")'>
+                    </a>
+                    <a id="4x2" onclick='desvirar("4x2")'>
+                    </a>
+                    <a id="4x3" onclick='desvirar("4x3")'>
+                    </a>
+                    <a id="4x4" onclick='desvirar("4x4")'>
+                    </a>
+                    <a id="4x5" onclick='desvirar("4x5")'>
+                    </a>
+                    <a id="4x6" onclick='desvirar("4x6")'>
+                    </a>
+            </div>
+                
+            <div class="coluna5">
+                    <a id="5x1" onclick='desvirar("5x1")'>
+                    </a>
+                    <a id="5x2" onclick='desvirar("5x2")'>
+                    </a>
+                    <a id="5x3" onclick='desvirar("5x3")'>
+                    </a>
+                    <a id="5x4" onclick='desvirar("5x4")'>
+                    </a>
+                    <a id="5x5" onclick='desvirar("5x5")'>
+                    </a>
+                    <a id="5x6" onclick='desvirar("5x6")'>
+                    </a>
+            </div>
+                
+            <div class="coluna6">
+                    <a id="6x1" onclick='desvirar("6x1")'>
+                    </a>
+                    <a id="6x2" onclick='desvirar("6x2")'>
+                    </a>
+                    <a id="6x3" onclick='desvirar("6x3")'>
+                    </a>
+                    <a id="6x4" onclick='desvirar("6x4")'>
+                    </a>
+                    <a id="6x5" onclick='desvirar("6x5")'>
+                    </a>
+                    <a id="6x6" onclick='desvirar("6x6")'>
+                    </a>
+            </div>
+
+                <p id="para1">Vez de:</p>
+                <p id= "jogador1"></p>
+                <p id= "jogador2"></p>
+
+                <a id="reiniciar" onclick = 'reinicia()' >Reiniciar</a>
+
+                <div id ="historico">
+                    Histórico aqui.
+                </div>
+            </div>
+
+
+
+            <div id="footer">
+                <p class="para">Trabalho 2 - Jogo da Memória</p>
+            </div>
+    </body>
+</html>
