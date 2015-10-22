@@ -18,7 +18,7 @@ var jogador2 = true;
 var QtdPeca;
 var ptJogador1 = 0;
 var ptJogador2;
-var pecaMisturada;
+var jogo;
 var click = 1;
 var vez = 0;
 var pontuacao;
@@ -64,10 +64,12 @@ function Opcoes(){
 	
 		if(QtdPeca == 1)
 		{
+			jogo = 1;
 			jogo1();
 		}
 		if(QtdPeca == 2)
 		{
+			jogo = 2;
 			jogo2();
 		}
 		if(QtdPeca == 3)
@@ -83,113 +85,231 @@ function jogo1(){
         op1[mistura1[1]] = "<img src='imagens/peca2.png'>";
         inv = new Array();
         inv[0] = "<img src='imagens/virado.png'>";
-        inv[1] = "<img src='imagens/virado.png'>";
         document.getElementById("1x1").innerHTML = inv[0];
-        document.getElementById("1x2").innerHTML = inv[1];
-        document.getElementById("2x1").innerHTML = inv[1];
+        document.getElementById("1x2").innerHTML = inv[0];
+        document.getElementById("2x1").innerHTML = inv[0];
         document.getElementById("2x2").innerHTML = inv[0];
 	}
 
 function jogo2(){
     inv = new Array();
     inv[0] = "<img src='imagens/virado.png'>";
-    inv[1] = "<img src='imagens/virado.png'>";
-    inv[2] = "<img src='imagens/virado.png'>";
-    inv[3] = "<img src='imagens/virado.png'>";
-    inv[4] = "<img src='imagens/virado.png'>";
-    inv[5] = "<img src='imagens/virado.png'>";
-    inv[6] = "<img src='imagens/virado.png'>";
-    inv[7] = "<img src='imagens/virado.png'>";
-    inv[8] = "<img src='imagens/virado.png'>";
-    inv[9] = "<img src='imagens/virado.png'>";
-    inv[10] = "<img src='imagens/virado.png'>";
-    inv[11] = "<img src='imagens/virado.png'>";
-    inv[12] = "<img src='imagens/virado.png'>";
-    inv[13] = "<img src='imagens/virado.png'>";
-    inv[14] = "<img src='imagens/virado.png'>";
-    inv[15] = "<img src='imagens/virado.png'>";
     op2 = new Array();
-    op2[0] = "<img src='imagens/peca1.png'>";
-    op2[1] = "<img src='imagens/peca2.png'>";
-    op2[2] = "<img src='imagens/peca3.png'>";
-    op2[3] = "<img src='imagens/peca4.png'>";
-    op2[4] = "<img src='imagens/peca5.png'>";
-    op2[5] = "<img src='imagens/peca6.png'>";
-    op2[6] = "<img src='imagens/peca7.png'>";
-    op2[7] = "<img src='imagens/peca8.png'>";
+    op2[mistura1[0]] = "<img src='imagens/peca1.png'>";
+    op2[mistura1[1]] = "<img src='imagens/peca2.png'>";
+    op2[mistura1[2]] = "<img src='imagens/peca3.png'>";
+    op2[mistura1[3]] = "<img src='imagens/peca4.png'>";
+    op2[mistura1[4]] = "<img src='imagens/peca5.png'>";
+    op2[mistura1[5]] = "<img src='imagens/peca6.png'>";
+    op2[mistura1[6]] = "<img src='imagens/peca7.png'>";
+    op2[mistura1[7]] = "<img src='imagens/peca8.png'>";
     document.getElementById("1x1").innerHTML = inv[0];
-    document.getElementById("1x2").innerHTML = inv[1];
-    document.getElementById("1x3").innerHTML = inv[2];
-    document.getElementById("1x4").innerHTML = inv[3];
-    document.getElementById("2x1").innerHTML = inv[4];
-    document.getElementById("2x2").innerHTML = inv[5];
-    document.getElementById("2x3").innerHTML = inv[6];
-    document.getElementById("2x4").innerHTML = inv[7];
-    document.getElementById("3x1").innerHTML = inv[8];
-    document.getElementById("3x2").innerHTML = inv[9];
-    document.getElementById("3x3").innerHTML = inv[10];
-    document.getElementById("3x4").innerHTML = inv[11];
-    document.getElementById("4x1").innerHTML = inv[12];
-    document.getElementById("4x2").innerHTML = inv[13];
-    document.getElementById("4x3").innerHTML = inv[14];
-    document.getElementById("4x4").innerHTML = inv[15];
+    document.getElementById("1x2").innerHTML = inv[0];
+    document.getElementById("1x3").innerHTML = inv[0];
+    document.getElementById("1x4").innerHTML = inv[0];
+    document.getElementById("2x1").innerHTML = inv[0];
+    document.getElementById("2x2").innerHTML = inv[0];
+    document.getElementById("2x3").innerHTML = inv[0];
+    document.getElementById("2x4").innerHTML = inv[0];
+    document.getElementById("3x1").innerHTML = inv[0];
+    document.getElementById("3x2").innerHTML = inv[0];
+    document.getElementById("3x3").innerHTML = inv[0];
+    document.getElementById("3x4").innerHTML = inv[0];
+    document.getElementById("4x1").innerHTML = inv[0];
+    document.getElementById("4x2").innerHTML = inv[0];
+    document.getElementById("4x3").innerHTML = inv[0];
+    document.getElementById("4x4").innerHTML = inv[0];
 }
 function jogo3(){
     inv = new Array();
     inv[0] = "<img src='imagens/virado.png'>";
-    inv[1] = "<img src='imagens/virado.png'>";
-    inv[2] = "<img src='imagens/virado.png'>";
-    inv[3] = "<img src='imagens/virado.png'>";
-    inv[4] = "<img src='imagens/virado.png'>";
-    inv[5] = "<img src='imagens/virado.png'>";
-    inv[6] = "<img src='imagens/virado.png'>";
-    inv[7] = "<img src='imagens/virado.png'>";
-    inv[8] = "<img src='imagens/virado.png'>";
-    inv[9] = "<img src='imagens/virado.png'>";
-    inv[10] = "<img src='imagens/virado.png'>";
-    inv[11] = "<img src='imagens/virado.png'>";
-    inv[12] = "<img src='imagens/virado.png'>";
-    inv[13] = "<img src='imagens/virado.png'>";
-    inv[14] = "<img src='imagens/virado.png'>";
     op3 = new Array();
-    op3[0] = "<img src='imagens/peca1.png'>";
-    op3[1] = "<img src='imagens/peca2.png'>";
-    op3[2] = "<img src='imagens/peca3.png'>";
-    op3[3] = "<img src='imagens/peca4.png'>";
-    op3[4] = "<img src='imagens/peca5.png'>";
-    op3[5] = "<img src='imagens/peca6.png'>";
-    op3[6] = "<img src='imagens/peca7.png'>";
-    op3[7] = "<img src='imagens/peca8.png'>";
-    op3[8] = "<img src='imagens/peca9.png'>";
-    op3[9] = "<img src='imagens/peca10.png'>";
-    op3[10] = "<img src='imagens/peca11.png'>";
-    op3[11] = "<img src='imagens/peca12.png'>";
-    op3[12] = "<img src='imagens/peca13.png'>";
-    op3[13] = "<img src='imagens/peca14.png'>";
-    op3[14] = "<img src='imagens/peca15.png'>";
-    op3[15] = "<img src='imagens/peca16.png'>";
-    op3[16] = "<img src='imagens/peca17.png'>";
-    op3[17] = "<img src='imagens/peca18.png'>";
-    document.getElementById("1x1").innerHTML = op3[0] + op3[1] + op3[2] + op3[3] + op3[4] + op3[5];
-    document.getElementById("2x1").innerHTML = op3[6] + op3[7] + op3[8] + op3[9] + op3[10] + op3[11];
-    document.getElementById("3x1").innerHTML = op3[12] + op3[13] + op3[14] + op3[15]+ op3[16] + op3[17];
-    document.getElementById("4x1").innerHTML = op3[0] + op3[1] + op3[5] + op3[6]+ op3[7] + op3[8];
-    document.getElementById("5x1").innerHTML = op3[8] + op3[9] + op3[10] + op3[11] + op3[12]+ op3[13];
-    document.getElementById("6x1").innerHTML = op3[14] + op3[0] + op3[1] + op3[2]+ op3[3] + op[4];
+    op3[mistura1[0]] = "<img src='imagens/peca1.png'>";
+    op3[mistura1[1]] = "<img src='imagens/peca2.png'>";
+    op3[mistura1[2]] = "<img src='imagens/peca3.png'>";
+    op3[mistura1[3]] = "<img src='imagens/peca4.png'>";
+    op3[mistura1[4]] = "<img src='imagens/peca5.png'>";
+    op3[mistura1[5]] = "<img src='imagens/peca6.png'>";
+    op3[mistura1[6]] = "<img src='imagens/peca7.png'>";
+    op3[mistura1[7]] = "<img src='imagens/peca8.png'>";
+    op3[mistura1[8]] = "<img src='imagens/peca9.png'>";
+    op3[mistura1[9]] = "<img src='imagens/peca10.png'>";
+    op3[mistura1[10]] = "<img src='imagens/peca11.png'>";
+    op3[mistura1[11]] = "<img src='imagens/peca12.png'>";
+    op3[mistura1[12]] = "<img src='imagens/peca13.png'>";
+    op3[mistura1[13]] = "<img src='imagens/peca14.png'>";
+    op3[mistura1[14]] = "<img src='imagens/peca15.png'>";
+    op3[mistura1[15]] = "<img src='imagens/peca16.png'>";
+    op3[mistura1[16]] = "<img src='imagens/peca17.png'>";
+    op3[mistura1[17]] = "<img src='imagens/peca18.png'>";
+    document.getElementById("1x1").innerHTML = inv[0];
+    document.getElementById("1x2").innerHTML = inv[0];
+    document.getElementById("1x3").innerHTML = inv[0];
+    document.getElementById("1x4").innerHTML = inv[0];
+	document.getElementById("1x5").innerHTML = inv[0];
+	document.getElementById("1x6").innerHTML = inv[0];
+    document.getElementById("2x1").innerHTML = inv[0];
+    document.getElementById("2x2").innerHTML = inv[0];
+    document.getElementById("2x3").innerHTML = inv[0];
+    document.getElementById("2x4").innerHTML = inv[0];
+	document.getElementById("2x5").innerHTML = inv[0];
+	document.getElementById("2x6").innerHTML = inv[0];
+    document.getElementById("3x1").innerHTML = inv[0];
+    document.getElementById("3x2").innerHTML = inv[0];
+    document.getElementById("3x3").innerHTML = inv[0];
+    document.getElementById("3x4").innerHTML = inv[0];
+	document.getElementById("3x5").innerHTML = inv[0];
+	document.getElementById("3x6").innerHTML = inv[0];
+    document.getElementById("4x1").innerHTML = inv[0];
+    document.getElementById("4x2").innerHTML = inv[0];
+    document.getElementById("4x3").innerHTML = inv[0];
+    document.getElementById("4x4").innerHTML = inv[0];
+	document.getElementById("4x5").innerHTML = inv[0];
+	document.getElementById("4x6").innerHTML = inv[0];
+	document.getElementById("5x1").innerHTML = inv[0];
+	document.getElementById("5x2").innerHTML = inv[0];
+	document.getElementById("5x3").innerHTML = inv[0];
+	document.getElementById("5x4").innerHTML = inv[0];
+	document.getElementById("5x5").innerHTML = inv[0];
+	document.getElementById("5x6").innerHTML = inv[0];
+	document.getElementById("6x1").innerHTML = inv[0];
+	document.getElementById("6x2").innerHTML = inv[0];
+	document.getElementById("6x3").innerHTML = inv[0];
+	document.getElementById("6x4").innerHTML = inv[0];
+	document.getElementById("6x5").innerHTML = inv[0];
+	document.getElementById("6x6").innerHTML = inv[0];
 }
 
 function desvirar(id){
+	if(jogo == 1){
     switch(id)
     {
-        case "1x1": document.getElementById(id).innerHTML = op1[0];
+        case "1x1": document.getElementById(id).innerHTML = op1[mistura1[0]];
             break;
-        case "1x2": document.getElementById(id).innerHTML = op1[1];
+        case "1x2": document.getElementById(id).innerHTML = op1[mistura1[1]];
             break;
-        case "2x1": document.getElementById(id).innerHTML = op1[1];
+        case "2x1": document.getElementById(id).innerHTML = op1[mistura1[1]];
             break;
-        case "2x2": document.getElementById(id).innerHTML = op1[0];
+        case "2x2": document.getElementById(id).innerHTML = op1[mistura1[0]];
             break;
     }
+	}
+	if(jogo == 2){
+	switch (id)
+	{
+		case "1x1": document.getElementById(id).innerHTML = op2[mistura1[7]];
+            break;
+		case "1x2": document.getElementById(id).innerHTML = op2[mistura1[6]];
+            break;
+		case "1x3": document.getElementById(id).innerHTML = op2[mistura1[7]];
+            break;
+		case "1x4": document.getElementById(id).innerHTML = op2[mistura1[6]];
+            break;
+		case "2x1": document.getElementById(id).innerHTML = op2[mistura1[5]];
+            break;
+		case "2x2": document.getElementById(id).innerHTML = op2[mistura1[4]];
+            break;
+		case "2x3": document.getElementById(id).innerHTML = op2[mistura1[3]];
+            break;
+		case "2x4": document.getElementById(id).innerHTML = op2[mistura1[2]];
+            break;
+		case "3x1": document.getElementById(id).innerHTML = op2[mistura1[1]];
+            break;
+		case "3x2": document.getElementById(id).innerHTML = op2[mistura1[0]];
+            break;
+		case "3x3": document.getElementById(id).innerHTML = op2[mistura1[5]];
+            break;
+		case "3x4": document.getElementById(id).innerHTML = op2[mistura1[4]];
+            break;
+		case "4x1": document.getElementById(id).innerHTML = op2[mistura1[3]];
+            break;
+		case "4x2": document.getElementById(id).innerHTML = op2[mistura1[2]];
+            break;
+		case "4x3": document.getElementById(id).innerHTML = op2[mistura1[1]];
+            break;
+		case "4x4": document.getElementById(id).innerHTML = op2[mistura1[0]];
+            break;
+	}
+	}
+	if(jogo == 3)
+	{
+		switch (id)
+	{
+		case "1x1": document.getElementById(id).innerHTML = op2[mistura1[0]];
+            break;
+		case "1x2": document.getElementById(id).innerHTML = op2[mistura1[1]];
+            break;
+		case "1x3": document.getElementById(id).innerHTML = op2[mistura1[2]];
+            break;
+		case "1x4": document.getElementById(id).innerHTML = op2[mistura1[3]];
+            break;
+		case "1x5": document.getElementById(id).innerHTML = op2[mistura1[4]];
+            break;
+		case "1x6": document.getElementById(id).innerHTML = op2[mistura1[5]];
+            break;
+		case "2x1": document.getElementById(id).innerHTML = op2[mistura1[6]];
+            break;
+		case "2x2": document.getElementById(id).innerHTML = op2[mistura1[7]];
+            break;
+		case "2x3": document.getElementById(id).innerHTML = op2[mistura1[8]];
+            break;
+		case "2x4": document.getElementById(id).innerHTML = op2[mistura1[9]];
+            break;
+		case "2x5": document.getElementById(id).innerHTML = op2[mistura1[10]];
+            break;
+		case "2x6": document.getElementById(id).innerHTML = op2[mistura1[11]];
+            break;
+		case "3x1": document.getElementById(id).innerHTML = op2[mistura1[12]];
+            break;
+		case "3x2": document.getElementById(id).innerHTML = op2[mistura1[13]];
+            break;
+		case "3x3": document.getElementById(id).innerHTML = op2[mistura1[14]];
+            break;
+		case "3x4": document.getElementById(id).innerHTML = op2[mistura1[15]];
+            break;
+		case "3x5": document.getElementById(id).innerHTML = op2[mistura1[16]];
+            break;
+		case "3x6": document.getElementById(id).innerHTML = op2[mistura1[17]];
+            break;
+		case "4x1": document.getElementById(id).innerHTML = op2[mistura1[0]];
+            break;
+		case "4x2": document.getElementById(id).innerHTML = op2[mistura1[1]];
+            break;
+		case "4x3": document.getElementById(id).innerHTML = op2[mistura1[2]];
+            break;
+		case "4x4": document.getElementById(id).innerHTML = op2[mistura1[3]];
+            break;
+		case "4x5": document.getElementById(id).innerHTML = op2[mistura1[4]];
+            break;
+		case "4x6": document.getElementById(id).innerHTML = op2[mistura1[5]];
+            break;
+		case "5x1": document.getElementById(id).innerHTML = op2[mistura1[6]];
+            break;
+		case "5x2": document.getElementById(id).innerHTML = op2[mistura1[7]];
+            break;
+		case "5x3": document.getElementById(id).innerHTML = op2[mistura1[8]];
+            break;
+		case "5x4": document.getElementById(id).innerHTML = op2[mistura1[9]];
+            break;
+		case "5x5": document.getElementById(id).innerHTML = op2[mistura1[10]];
+            break;
+		case "5x6": document.getElementById(id).innerHTML = op2[mistura1[11]];
+            break;
+		case "6x1": document.getElementById(id).innerHTML = op2[mistura1[12]];
+            break;
+		case "6x2": document.getElementById(id).innerHTML = op2[mistura1[13]];
+            break;
+		case "6x3": document.getElementById(id).innerHTML = op2[mistura1[14]];
+            break;
+		case "6x4": document.getElementById(id).innerHTML = op2[mistura1[15]];
+            break;
+		case "6x5": document.getElementById(id).innerHTML = op2[mistura1[16]];
+            break;
+		case "6x6": document.getElementById(id).innerHTML = op2[mistura1[17]];
+            break;
+			
+	}
+	}
     if(vez < 2)
     {
         vez++;
@@ -203,7 +323,7 @@ function desvirar(id){
         peca2 = id;
         vez = 0;
         if(peca1 == peca2){
-            alert("clicou na mesma peça");
+            alert("clicou na mesma peca");
             vez = 2;
         }else pontuacao();
     }
@@ -217,7 +337,7 @@ function pontuacao(){
         }
         if(document.getElementById(peca1).innerHTML != document.getElementById(peca2).innerHTML){
         esconde();
-        }
+        }		
         if(QtdJogador == 2){
         document.getElementById("jogador1").innerHTML ="Pontuacao do jogador 1: " + ptJogador1;
         document.getElementById("jogador1").innerHTML ="Pontuacao do jogador 1: " + ptJogador1;
@@ -338,10 +458,11 @@ function reinicia(){
           document.getElementById("6x4").innerHTML = "";
           document.getElementById("6x5").innerHTML = "";
           document.getElementById("6x6").innerHTML = "";
+		  ptJogador1 = 0;
 	Opcoes();
 }
 function esconde(){
+	
     document.getElementById(peca1).innerHTML = inv[0];
-    document.getElementById(peca2).innerHTML = inv[1];
-	ptJogador1--;
+    document.getElementById(peca2).innerHTML = inv[0];
 }
