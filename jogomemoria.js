@@ -2,7 +2,7 @@
 //Coloque aqui oq você fez!!!!!!
 //
 //Lista!
-//Opcoes ->
+//Opcoes -> 
 //Jogo1 ->
 //Jogo2 ->
 //Jogo3 ->
@@ -10,8 +10,9 @@
 //pontuacao ->
 //mistura -> OK
 //historico -> OK
-//reinicia ->
+//reinicia -> OK
 //esconde ->
+//termina o jogo ->
 */
 var jogador1 = false;
 var jogador2 = true;
@@ -62,9 +63,7 @@ function Opcoes(){
 		document.getElementById("jogador2").innerHTML = "Pontuacao do jogador " + jogador2 + ": ";
 		QtdPeca = prompt("Qtd de pecas? 2x2(1) 4x4(2) ou 6x6(3)"); //errado<input type="radio"
 	}
-	
 	}
-	
 		if(QtdPeca == 1)
 		{
 			jogo = 1;
@@ -77,6 +76,7 @@ function Opcoes(){
 		}
 		if(QtdPeca == 3)
 		{
+			jogo = 3
 			jogo3();
 		}
 }
@@ -96,14 +96,14 @@ function jogo2(){
     inv = new Array();
     inv[0] = "<img src='imagens/virado.png'>";
     op2 = new Array();
-    op2[mistura1[0]] = "<img src='imagens/peca1.png'>";
-    op2[mistura1[1]] = "<img src='imagens/peca2.png'>";
-    op2[mistura1[2]] = "<img src='imagens/peca3.png'>";
-    op2[mistura1[3]] = "<img src='imagens/peca4.png'>";
-    op2[mistura1[4]] = "<img src='imagens/peca5.png'>";
-    op2[mistura1[5]] = "<img src='imagens/peca6.png'>";
-    op2[mistura1[6]] = "<img src='imagens/peca7.png'>";
-    op2[mistura1[7]] = "<img src='imagens/peca8.png'>";
+    op2[mistura2[0]] = "<img src='imagens/peca1.png'>";
+    op2[mistura2[1]] = "<img src='imagens/peca2.png'>";
+    op2[mistura2[2]] = "<img src='imagens/peca3.png'>";
+    op2[mistura2[3]] = "<img src='imagens/peca4.png'>";
+    op2[mistura2[4]] = "<img src='imagens/peca5.png'>";
+    op2[mistura2[5]] = "<img src='imagens/peca6.png'>";
+    op2[mistura2[6]] = "<img src='imagens/peca7.png'>";
+    op2[mistura2[7]] = "<img src='imagens/peca8.png'>";
     document.getElementById("1x1").innerHTML = inv[0];
     document.getElementById("1x2").innerHTML = inv[0];
     document.getElementById("1x3").innerHTML = inv[0];
@@ -125,24 +125,24 @@ function jogo3(){
     inv = new Array();
     inv[0] = "<img src='imagens/virado.png'>";
     op3 = new Array();
-    op3[mistura1[0]] = "<img src='imagens/peca1.png'>";
-    op3[mistura1[1]] = "<img src='imagens/peca2.png'>";
-    op3[mistura1[2]] = "<img src='imagens/peca3.png'>";
-    op3[mistura1[3]] = "<img src='imagens/peca4.png'>";
-    op3[mistura1[4]] = "<img src='imagens/peca5.png'>";
-    op3[mistura1[5]] = "<img src='imagens/peca6.png'>";
-    op3[mistura1[6]] = "<img src='imagens/peca7.png'>";
-    op3[mistura1[7]] = "<img src='imagens/peca8.png'>";
-    op3[mistura1[8]] = "<img src='imagens/peca9.png'>";
-    op3[mistura1[9]] = "<img src='imagens/peca10.png'>";
-    op3[mistura1[10]] = "<img src='imagens/peca11.png'>";
-    op3[mistura1[11]] = "<img src='imagens/peca12.png'>";
-    op3[mistura1[12]] = "<img src='imagens/peca13.png'>";
-    op3[mistura1[13]] = "<img src='imagens/peca14.png'>";
-    op3[mistura1[14]] = "<img src='imagens/peca15.png'>";
-    op3[mistura1[15]] = "<img src='imagens/peca16.png'>";
-    op3[mistura1[16]] = "<img src='imagens/peca17.png'>";
-    op3[mistura1[17]] = "<img src='imagens/peca18.png'>";
+    op3[mistura3[0]] = "<img src='imagens/peca1.png'>";
+    op3[mistura3[1]] = "<img src='imagens/peca2.png'>";
+    op3[mistura3[2]] = "<img src='imagens/peca3.png'>";
+    op3[mistura3[3]] = "<img src='imagens/peca4.png'>";
+    op3[mistura3[4]] = "<img src='imagens/peca5.png'>";
+    op3[mistura3[5]] = "<img src='imagens/peca6.png'>";
+    op3[mistura3[6]] = "<img src='imagens/peca7.png'>";
+    op3[mistura3[7]] = "<img src='imagens/peca8.png'>";
+    op3[mistura3[8]] = "<img src='imagens/peca9.png'>";
+    op3[mistura3[9]] = "<img src='imagens/peca10.png'>";
+    op3[mistura3[10]] = "<img src='imagens/peca11.png'>";
+    op3[mistura3[11]] = "<img src='imagens/peca12.png'>";
+    op3[mistura3[12]] = "<img src='imagens/peca13.png'>";
+    op3[mistura3[13]] = "<img src='imagens/peca14.png'>";
+    op3[mistura3[14]] = "<img src='imagens/peca15.png'>";
+    op3[mistura3[15]] = "<img src='imagens/peca16.png'>";
+    op3[mistura3[16]] = "<img src='imagens/peca17.png'>";
+    op3[mistura3[17]] = "<img src='imagens/peca18.png'>";
     document.getElementById("1x1").innerHTML = inv[0];
     document.getElementById("1x2").innerHTML = inv[0];
     document.getElementById("1x3").innerHTML = inv[0];
@@ -197,37 +197,37 @@ function desvirar(id){
 	if(jogo == 2){
 	switch (id)
 	{
-		case "1x1": document.getElementById(id).innerHTML = op2[mistura1[7]];
+		case "1x1": document.getElementById(id).innerHTML = op2[mistura2[7]];
             break;
-		case "1x2": document.getElementById(id).innerHTML = op2[mistura1[6]];
+		case "1x2": document.getElementById(id).innerHTML = op2[mistura2[6]];
             break;
-		case "1x3": document.getElementById(id).innerHTML = op2[mistura1[7]];
+		case "1x3": document.getElementById(id).innerHTML = op2[mistura2[7]];
             break;
-		case "1x4": document.getElementById(id).innerHTML = op2[mistura1[6]];
+		case "1x4": document.getElementById(id).innerHTML = op2[mistura2[6]];
             break;
-		case "2x1": document.getElementById(id).innerHTML = op2[mistura1[5]];
+		case "2x1": document.getElementById(id).innerHTML = op2[mistura2[5]];
             break;
-		case "2x2": document.getElementById(id).innerHTML = op2[mistura1[4]];
+		case "2x2": document.getElementById(id).innerHTML = op2[mistura2[4]];
             break;
-		case "2x3": document.getElementById(id).innerHTML = op2[mistura1[3]];
+		case "2x3": document.getElementById(id).innerHTML = op2[mistura2[3]];
             break;
-		case "2x4": document.getElementById(id).innerHTML = op2[mistura1[2]];
+		case "2x4": document.getElementById(id).innerHTML = op2[mistura2[2]];
             break;
-		case "3x1": document.getElementById(id).innerHTML = op2[mistura1[1]];
+		case "3x1": document.getElementById(id).innerHTML = op2[mistura2[1]];
             break;
-		case "3x2": document.getElementById(id).innerHTML = op2[mistura1[0]];
+		case "3x2": document.getElementById(id).innerHTML = op2[mistura2[0]];
             break;
-		case "3x3": document.getElementById(id).innerHTML = op2[mistura1[5]];
+		case "3x3": document.getElementById(id).innerHTML = op2[mistura2[5]];
             break;
-		case "3x4": document.getElementById(id).innerHTML = op2[mistura1[4]];
+		case "3x4": document.getElementById(id).innerHTML = op2[mistura2[4]];
             break;
-		case "4x1": document.getElementById(id).innerHTML = op2[mistura1[3]];
+		case "4x1": document.getElementById(id).innerHTML = op2[mistura2[3]];
             break;
-		case "4x2": document.getElementById(id).innerHTML = op2[mistura1[2]];
+		case "4x2": document.getElementById(id).innerHTML = op2[mistura2[2]];
             break;
-		case "4x3": document.getElementById(id).innerHTML = op2[mistura1[1]];
+		case "4x3": document.getElementById(id).innerHTML = op2[mistura2[1]];
             break;
-		case "4x4": document.getElementById(id).innerHTML = op2[mistura1[0]];
+		case "4x4": document.getElementById(id).innerHTML = op2[mistura2[0]];
             break;
 	}
 	}
@@ -235,79 +235,78 @@ function desvirar(id){
 	{
 		switch (id)
 	{
-		case "1x1": document.getElementById(id).innerHTML = op2[mistura1[0]];
+		case "1x1": document.getElementById(id).innerHTML = op3[mistura3[0]];
             break;
-		case "1x2": document.getElementById(id).innerHTML = op2[mistura1[1]];
+		case "1x2": document.getElementById(id).innerHTML = op3[mistura3[1]];
             break;
-		case "1x3": document.getElementById(id).innerHTML = op2[mistura1[2]];
+		case "1x3": document.getElementById(id).innerHTML = op3[mistura3[2]];
             break;
-		case "1x4": document.getElementById(id).innerHTML = op2[mistura1[3]];
+		case "1x4": document.getElementById(id).innerHTML = op3[mistura3[3]];
             break;
-		case "1x5": document.getElementById(id).innerHTML = op2[mistura1[4]];
+		case "1x5": document.getElementById(id).innerHTML = op3[mistura3[4]];
             break;
-		case "1x6": document.getElementById(id).innerHTML = op2[mistura1[5]];
+		case "1x6": document.getElementById(id).innerHTML = op3[mistura3[5]];
             break;
-		case "2x1": document.getElementById(id).innerHTML = op2[mistura1[6]];
+		case "2x1": document.getElementById(id).innerHTML = op3[mistura3[6]];
             break;
-		case "2x2": document.getElementById(id).innerHTML = op2[mistura1[7]];
+		case "2x2": document.getElementById(id).innerHTML = op3[mistura3[7]];
             break;
-		case "2x3": document.getElementById(id).innerHTML = op2[mistura1[8]];
+		case "2x3": document.getElementById(id).innerHTML = op3[mistura3[8]];
             break;
-		case "2x4": document.getElementById(id).innerHTML = op2[mistura1[9]];
+		case "2x4": document.getElementById(id).innerHTML = op3[mistura3[9]];
             break;
-		case "2x5": document.getElementById(id).innerHTML = op2[mistura1[10]];
+		case "2x5": document.getElementById(id).innerHTML = op3[mistura3[10]];
             break;
-		case "2x6": document.getElementById(id).innerHTML = op2[mistura1[11]];
+		case "2x6": document.getElementById(id).innerHTML = op3[mistura3[11]];
             break;
-		case "3x1": document.getElementById(id).innerHTML = op2[mistura1[12]];
+		case "3x1": document.getElementById(id).innerHTML = op3[mistura3[12]];
             break;
-		case "3x2": document.getElementById(id).innerHTML = op2[mistura1[13]];
+		case "3x2": document.getElementById(id).innerHTML = op3[mistura3[13]];
             break;
-		case "3x3": document.getElementById(id).innerHTML = op2[mistura1[14]];
+		case "3x3": document.getElementById(id).innerHTML = op3[mistura3[14]];
             break;
-		case "3x4": document.getElementById(id).innerHTML = op2[mistura1[15]];
+		case "3x4": document.getElementById(id).innerHTML = op3[mistura3[15]];
             break;
-		case "3x5": document.getElementById(id).innerHTML = op2[mistura1[16]];
+		case "3x5": document.getElementById(id).innerHTML = op3[mistura3[16]];
             break;
-		case "3x6": document.getElementById(id).innerHTML = op2[mistura1[17]];
+		case "3x6": document.getElementById(id).innerHTML = op3[mistura3[17]];
             break;
-		case "4x1": document.getElementById(id).innerHTML = op2[mistura1[0]];
+		case "4x1": document.getElementById(id).innerHTML = op3[mistura3[0]];
             break;
-		case "4x2": document.getElementById(id).innerHTML = op2[mistura1[1]];
+		case "4x2": document.getElementById(id).innerHTML = op3[mistura3[1]];
             break;
-		case "4x3": document.getElementById(id).innerHTML = op2[mistura1[2]];
+		case "4x3": document.getElementById(id).innerHTML = op3[mistura3[2]];
             break;
-		case "4x4": document.getElementById(id).innerHTML = op2[mistura1[3]];
+		case "4x4": document.getElementById(id).innerHTML = op3[mistura3[3]];
             break;
-		case "4x5": document.getElementById(id).innerHTML = op2[mistura1[4]];
+		case "4x5": document.getElementById(id).innerHTML = op3[mistura3[4]];
             break;
-		case "4x6": document.getElementById(id).innerHTML = op2[mistura1[5]];
+		case "4x6": document.getElementById(id).innerHTML = op3[mistura3[5]];
             break;
-		case "5x1": document.getElementById(id).innerHTML = op2[mistura1[6]];
+		case "5x1": document.getElementById(id).innerHTML = op3[mistura3[6]];
             break;
-		case "5x2": document.getElementById(id).innerHTML = op2[mistura1[7]];
+		case "5x2": document.getElementById(id).innerHTML = op3[mistura3[7]];
             break;
-		case "5x3": document.getElementById(id).innerHTML = op2[mistura1[8]];
+		case "5x3": document.getElementById(id).innerHTML = op3[mistura3[8]];
             break;
-		case "5x4": document.getElementById(id).innerHTML = op2[mistura1[9]];
+		case "5x4": document.getElementById(id).innerHTML = op3[mistura3[9]];
             break;
-		case "5x5": document.getElementById(id).innerHTML = op2[mistura1[10]];
+		case "5x5": document.getElementById(id).innerHTML = op3[mistura3[10]];
             break;
-		case "5x6": document.getElementById(id).innerHTML = op2[mistura1[11]];
+		case "5x6": document.getElementById(id).innerHTML = op3[mistura3[11]];
             break;
-		case "6x1": document.getElementById(id).innerHTML = op2[mistura1[12]];
+		case "6x1": document.getElementById(id).innerHTML = op3[mistura3[12]];
             break;
-		case "6x2": document.getElementById(id).innerHTML = op2[mistura1[13]];
+		case "6x2": document.getElementById(id).innerHTML = op3[mistura3[13]];
             break;
-		case "6x3": document.getElementById(id).innerHTML = op2[mistura1[14]];
+		case "6x3": document.getElementById(id).innerHTML = op3[mistura3[14]];
             break;
-		case "6x4": document.getElementById(id).innerHTML = op2[mistura1[15]];
+		case "6x4": document.getElementById(id).innerHTML = op3[mistura3[15]];
             break;
-		case "6x5": document.getElementById(id).innerHTML = op2[mistura1[16]];
+		case "6x5": document.getElementById(id).innerHTML = op3[mistura3[16]];
             break;
-		case "6x6": document.getElementById(id).innerHTML = op2[mistura1[17]];
+		case "6x6": document.getElementById(id).innerHTML = op3[mistura3[17]];
             break;
-			
 	}
 	}
     if(vez < 2)
@@ -325,7 +324,8 @@ function desvirar(id){
         if(peca1 == peca2){
             alert("clicou na mesma peca");
             vez = 2;
-        }else pontuacao();
+        }
+	else pontuacao();
     }
 }
 
@@ -360,7 +360,7 @@ function pontuacao(){
         }
         if(QtdJogador == 2){
         document.getElementById("jogador1").innerHTML ="Pontuacao do jogador 1: " + ptJogador1;
-        document.getElementById("jogador1").innerHTML ="Pontuacao do jogador 1: " + ptJogador1;
+        document.getElementById("jogador1").innerHTML ="Pontuacao do jogador 2: " + ptJogador2;
         }else if(QtdJogador == 1)
         {
         document.getElementById("jogador1").innerHTML ="Pontuacao do jogador 1: " + ptJogador1;
@@ -393,10 +393,10 @@ function mistura(){
       }
 
       var p, n, tmp;
-      for (p = mistura1.length; p;) {
+      for (p = mistura2.length; p;) {
         n = Math.random() * p-- | 0;
         tmp = mistura1[n];
-        mistura1[n] = mistura1[p];
+        mistura1[n] = mistura2[p];
         mistura1[p] = tmp;
       }
     }
@@ -409,10 +409,10 @@ function mistura(){
       }
 
       var p, n, tmp;
-      for (p = mistura1.length; p;) {
+      for (p = mistura3.length; p;) {
         n = Math.random() * p-- | 0;
         tmp = mistura1[n];
-        mistura1[n] = mistura1[p];
+        mistura1[n] = mistura3[p];
         mistura1[p] = tmp;
       }
     }
