@@ -11,7 +11,7 @@
 //mistura -> OK
 //historico ->
 //reinicia ->
-//esconde -> OK, para 2 peças
+//esconde ->
 */
 var jogador1 = false;
 var jogador2 = true;
@@ -203,19 +203,10 @@ function desvirar(id){
         peca2 = id;
         vez = 0;
         if(peca1 == peca2){
-            alert("clicou na mesma peca");
+            alert("clicou na mesma peça");
             vez = 2;
-        }
-		if(document.getElementById(peca1).innerHTML != document.getElementById(peca2).innerHTML)
-		{
-			ptJogador1++;
-			setTimeout(function(){
-				esconde(peca1, peca2)
-			},1000);
-        }
-	}
-
-	else pontuacao();
+        }else pontuacao();
+    }
 }
 
 function pontuacao(){
@@ -223,6 +214,9 @@ function pontuacao(){
         if(document.getElementById(peca1).innerHTML == document.getElementById(peca2).innerHTML && jogador1 == true)
         {
            ptJogador1++;
+        }
+        if(document.getElementById(peca1).innerHTML != document.getElementById(peca2).innerHTML){
+        esconde();
         }
         if(QtdJogador == 2){
         document.getElementById("jogador1").innerHTML ="Pontuacao do jogador 1: " + ptJogador1;
@@ -307,9 +301,7 @@ function mistura(){
 function historico(){
     
 }
-
 function reinicia(){
-
           document.getElementById("1x1").innerHTML = "";
           document.getElementById("1x2").innerHTML = "";
           document.getElementById("1x3").innerHTML = "";
@@ -348,9 +340,8 @@ function reinicia(){
           document.getElementById("6x6").innerHTML = "";
 	Opcoes();
 }
-
-function esconde(peca1, peca2){
-		document.getElementById(peca1).innerHTML = inv[0];
-		document.getElementById(peca2).innerHTML = inv[1];
-		ptJogador1++;
+function esconde(){
+    document.getElementById(peca1).innerHTML = inv[0];
+    document.getElementById(peca2).innerHTML = inv[1];
+	ptJogador1--;
 }
