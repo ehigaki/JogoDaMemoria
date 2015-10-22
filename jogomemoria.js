@@ -9,7 +9,7 @@
 //desvirar ->
 //pontuacao ->
 //mistura -> OK
-//historico ->
+//historico -> OK
 //reinicia ->
 //esconde ->
 */
@@ -28,6 +28,9 @@ var QtdJogador=0;
 var mistura1 = new Array; // Vetores com valores embaralhados
 var mistura2 = new Array;
 var mistura3 = new Array;
+
+var historico ='';
+var partida =1;
 
 function Opcoes(){
 	QtdJogador = prompt(" 1 ou 2 jogadores? (escreva apenas 1 ou 2)");
@@ -77,7 +80,6 @@ function Opcoes(){
 			jogo3();
 		}
 }
-
 function jogo1(){
         op1 = new Array();
         mistura();
@@ -90,7 +92,6 @@ function jogo1(){
         document.getElementById("2x1").innerHTML = inv[0];
         document.getElementById("2x2").innerHTML = inv[0];
 	}
-
 function jogo2(){
     inv = new Array();
     inv[0] = "<img src='imagens/virado.png'>";
@@ -179,7 +180,6 @@ function jogo3(){
 	document.getElementById("6x5").innerHTML = inv[0];
 	document.getElementById("6x6").innerHTML = inv[0];
 }
-
 function desvirar(id){
 	if(jogo == 1){
     switch(id)
@@ -418,9 +418,21 @@ function mistura(){
     }
 }
 
-function historico(){
+function save_hist(){
+
+    if(QtdJogador == 1){
+        historico = historico + "<p>Partida: "+ partida + " Jogador: " + jogador1 + " pts: " + ptJogador1 + "</p>";
+        document.getElementById("inf_hist").innerHTML = historico;
+    }
+    if(QtdJogador == 2){
+        
+        historico = historico + "<p>Partida: "+ partida + " Jogador: " + jogador1 + " pts: " + ptJogador1 +  " || Jogador: " + jogador2 + " pts: " + ptJogador2 + "</p>" ;
+        document.getElementById("inf_hist").innerHTML = historico;
+    }
     
+
 }
+
 function reinicia(){
           document.getElementById("1x1").innerHTML = "";
           document.getElementById("1x2").innerHTML = "";
@@ -458,11 +470,12 @@ function reinicia(){
           document.getElementById("6x4").innerHTML = "";
           document.getElementById("6x5").innerHTML = "";
           document.getElementById("6x6").innerHTML = "";
+		  save_hist();
+		  partida++;
 		  ptJogador1 = 0;
-	Opcoes();
+		  Opcoes();
 }
 function esconde(){
-	
     document.getElementById(peca1).innerHTML = inv[0];
     document.getElementById(peca2).innerHTML = inv[0];
 }
