@@ -14,11 +14,13 @@
 //esconde ->
 //termina o jogo ->
 */
-var jogador1 = false;
-var jogador2 = true;
+var vezJogador1 = true;
+var vezJogador2 = false;
 var QtdPeca;
+var jogador1;
+var jogador2;
 var ptJogador1 = 0;
-var ptJogador2;
+var ptJogador2 = 0;
 var jogo;
 var click = 1;
 var vez = 0;
@@ -345,25 +347,34 @@ function pontuacao(){
         {
         document.getElementById("jogador1").innerHTML ="Pontuacao do jogador 1: " + ptJogador1;
         }
-    }else if(QtdJogador == 2)
+    }
+	if(QtdJogador == 2)
     {
-        if(document.getElementById(peca1).innerHTML == document.getElementById(peca2).innerHTML && jogador1 == true)
+        if(document.getElementById(peca1).innerHTML == document.getElementById(peca2).innerHTML && vezJogador1 == true)
         {
            ptJogador1++;
         }
-        if(document.getElementById(peca1).innerHTML == document.getElementById(peca2).innerHTML && jogador2 == true)
+        if(document.getElementById(peca1).innerHTML == document.getElementById(peca2).innerHTML && vezJogador2 == true)
         {
+			alert("precisa entrar aqui");
             ptJogador2++;
         }
-        if(document.getElementById(peca1).innerHTML != document.getElementById(peca2).innerHTML){
-        desvira();
+        if(document.getElementById(peca1).innerHTML != document.getElementById(peca2).innerHTML && vezJogador1 == true){
+        esconde();
+		vezJogador1 == false;
+		vezJogador2 == true;
+        }
+		if(document.getElementById(peca1).innerHTML != document.getElementById(peca2).innerHTML && vezJogador2 == true){
+        esconde();
+		vezJogador1 == true;
+		vezJogador2 == false;
         }
         if(QtdJogador == 2){
-        document.getElementById("jogador1").innerHTML ="Pontuacao do jogador 1: " + ptJogador1;
-        document.getElementById("jogador1").innerHTML ="Pontuacao do jogador 2: " + ptJogador2;
+        document.getElementById("jogador1").innerHTML = "Pontuacao do jogador " + jogador1 + ": "+ ptJogador1;
+        document.getElementById("jogador2").innerHTML = "Pontuacao do jogador " + jogador2 + ": "+ ptJogador2;
         }else if(QtdJogador == 1)
         {
-        document.getElementById("jogador1").innerHTML ="Pontuacao do jogador 1: " + ptJogador1;
+        document.getElementById("jogador1").innerHTML ="Pontuacao do jogador"+ jogador1 +": " + ptJogador1;
         }
     }
 }
